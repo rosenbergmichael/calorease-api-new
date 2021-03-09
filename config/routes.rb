@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
- 
-  resources :foods
-  resources :trackers
+
+  namespace :api do
+    namespace :v1 do 
+      resources :trackers do 
+        resources :foods
+      end
+    end
+  end 
+
 end
+ 
