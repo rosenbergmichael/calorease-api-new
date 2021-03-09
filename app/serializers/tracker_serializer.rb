@@ -1,3 +1,8 @@
 class TrackerSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :day, :date, :totalcal
+
+  has_many :foods 
 end
+
+
+
